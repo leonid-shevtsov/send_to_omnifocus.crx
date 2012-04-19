@@ -1,0 +1,22 @@
+{
+  "name": "Send to OmniFocus",
+  "version": "0.1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon16.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "description": "A toolbar button to send the current page to the OmniFocus inbox.",
+  "browser_action": {
+    "default_icon": "browser_action.png",
+    "default_title": "Send this page to the OmniFocus inbox"
+  },
+  "background": {
+    "scripts" : ["background.js"]
+  },
+  "permissions": [
+    "tabs", "http://*/*",
+    "tabs", "https://*/*"
+  ]
+}
