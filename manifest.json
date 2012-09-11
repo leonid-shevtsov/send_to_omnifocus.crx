@@ -15,7 +15,9 @@
   "background": {
     "scripts" : ["background.js"]
   },
+  "options_page": "options.html",
   "permissions": [
+    "storage",
     "tabs", "http://*/*",
     "tabs", "https://*/*"
   ]
