@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Send to OmniFocus Options</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+  </head>
+  <body class="container">
+    <div class="page-header">
+      <h1>Send to OmniFocus Options</h1>
+    </div>
+
+    <div class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label" for="template">Template</label>
+        <div class="controls">
+          <input type="text" name="template" id="template"></input>
+          <span class="help-block">%s will be replaced with the page
+            title.</span>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Example:</label>
+        <div class="controls">
+          <input type="text" name="example" id="example"
+            disabled></input>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="options.js"></script>
+    <script type="text/javascript" src="options_editor.js"></script>
+  </body>
+</html>
