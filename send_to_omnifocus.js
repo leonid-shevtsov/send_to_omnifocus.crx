@@ -1,5 +1,5 @@
-(function() {
-  var name = 'Read «' + document.title + '»';
+SendToOmnifocus.loadTemplate(function(template) {
+  var name = SendToOmnifocus.formatTemplate(template, document.title);
   var note = window.location;
   var selection = window.getSelection().toString();
 
@@ -11,4 +11,4 @@
 
   // window.location = url does not work repetitively because of http://code.google.com/p/chromium/issues/detail?id=104853
   document.body.insertAdjacentHTML('afterEnd', '<iframe src="'+url+'" style="display:none">');
-})();
+});
