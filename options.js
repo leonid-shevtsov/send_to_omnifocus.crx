@@ -1,6 +1,6 @@
 window.SendToOmnifocus = (function() {
   var storage = chrome.storage.sync;
-  var defaultTitleTemplate = 'Read "%title%"';
+  var defaultTitleTemplate = '%title%';
   var defaultNoteTemplate = "%url%\n%selection%";
 
   return {

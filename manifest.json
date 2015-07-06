@@ -1,10 +1,9 @@
 {
   "name": "Send to OmniFocus",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "manifest_version": 2,
   "icons": {
     "16": "icon16.png",
-    "64": "icon64.png",
     "128": "icon128.png"
   },
   "description": "A toolbar button to send the current page to the OmniFocus inbox.",
