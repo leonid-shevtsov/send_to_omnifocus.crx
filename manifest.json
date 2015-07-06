@@ -13,9 +13,14 @@
     "default_title": "Send this page to the OmniFocus inbox"
   },
   "background": {
-    "scripts" : ["background.js"]
+    "scripts" : ["options.js", "background.js"],
+    "persistent": false
   },
   "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
   "permissions": [
     "storage",
     "tabs", "http://*/*",

@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Send to OmniFocus Options</title>
-    <link rel="stylesheet" href="bootstrap.min.css"/>
-  </head>
-  <body class="container">
-    <div class="page-header">
-      <h1>Send to OmniFocus Options</h1>
+<head>
+  <title>Send to OmniFocus Options</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <div style="width: 50em">
+    <div style="float: left; width: 50%">
+      <h2>Task template</h2>
+      <p>
+        <input type="text" name="title_template" id="title_template" size="40"></input>
+        <br><br>
+        <textarea type="text" name="note_template" id="note_template" cols="40" rows="3"></textarea>
+      </p>
     </div>
 
-    <div class="form-horizontal">
-      <div class="control-group">
-        <label class="control-label" for="template">Template</label>
-        <div class="controls">
-          <input type="text" name="template" id="template"></input>
-          <span class="help-block">%s will be replaced with the page
-            title.</span>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <label class="control-label">Example:</label>
-        <div class="controls">
-          <input type="text" name="example" id="example"
-            disabled></input>
-        </div>
-      </div>
+    <div style="float: right; width: 50%">
+      <h2>Demo</h2>
+      <p>
+        <input type="text" name="title_example" id="title_example" readonly size="40"></input>
+        <br><br>
+        <textarea type="text" name="note_example" id="note_example" cols="40" rows="3" disabled></textarea>
+      </p>
     </div>
-    
-    <script type="text/javascript" src="options.js"></script>
-    <script type="text/javascript" src="options_editor.js"></script>
-  </body>
+  </div>
+
+  <div style="clear: both">
+    <h2>Value placeholders</h2>
+    <p>
+      <b>%title%</b> - Page title<br>
+      <b>%url%</b> - Page URL<br>
+      <b>%selection%</b> - Selected text
+    </p>
+  </div>
+
+  <script type="text/javascript" src="options.js"></script>
+  <script type="text/javascript" src="options_editor.js"></script>
+</body>
 </html>

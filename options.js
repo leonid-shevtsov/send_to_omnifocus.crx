@@ -1,20 +1,29 @@
-var SendToOmnifocus = (function() {
+window.SendToOmnifocus = (function() {
   var storage = chrome.storage.sync;
-  var defaultTemplate = 'Read «%s»';
+  var defaultTitleTemplate = 'Read "%title%"';
+  var defaultNoteTemplate = "%url%\n%selection%";
 
   return {
-    loadTemplate: function(callback) {
-      storage.get({'template': defaultTemplate}, function(items) {
-        callback(items.template);
+    loadTemplates: function(callback) {
+      storage.get({
+        "title_template": defaultTitleTemplate,
+        "note_template": defaultNoteTemplate
+      }, function(templates) {
+        callback(templates);
       });
     },
 
-    saveTemplate: function(template) {
-      storage.set({'template': template});
+    saveTemplate: function(name, value) {
+      var payload = {};
+      payload[name] = value;
+      storage.set(payload);
     },
 
-    formatTemplate: function(template, text) {
-      return template.replace('%s', text);
+    formatTemplate: function(template, params) {
+      return template
+        .replace("%title%", params.title)
+        .replace("%url%", params.url)
+        .replace("%selection%", params.selection);
     }
   };
 })();
