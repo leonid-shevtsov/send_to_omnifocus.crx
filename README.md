@@ -11,6 +11,6 @@ This extension adds a toolbar button that opens up the OmniFocus Quick Entry win
 
 * * *
 
-(c) 2012-2015 Leonid Shevtsov
+(c) 2012-2017 Leonid Shevtsov
 
 I am not affiliated with OmniGroup

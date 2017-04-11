@@ -1,3 +1,7 @@
+# 2.1.0 2017-04-11
+
+* switch to the activeTab permission level to avoid requiring access to all_urls
+
 # 2.0.0 2015-07-06
 
 * add options page to customize task title and note (@guyboltonking)
