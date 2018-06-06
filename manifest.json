@@ -12,7 +12,10 @@
     "default_title": "Send this page to the OmniFocus inbox"
   },
   "background": {
-    "scripts" : ["options.js", "background.js"],
+    "scripts": [
+      "options.js",
+      "background.js"
+    ],
     "persistent": false
   },
   "options_page": "options.html",

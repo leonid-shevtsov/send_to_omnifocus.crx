@@ -10,8 +10,7 @@
     var example = document.querySelector(exampleSelector);
 
     var updateExample = function() {
-      example.value =
-        SendToOmnifocus.formatTemplate(edit.value, exampleParams);
+      example.value = SendToOmnifocus.formatTemplate(edit.value, exampleParams);
     };
 
     edit.addEventListener("keyup", function() {
