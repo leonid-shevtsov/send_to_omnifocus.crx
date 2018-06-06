@@ -1,3 +1,13 @@
+function openUrl(tabId, url) {
+  chrome.tabs.executeScript(tabId, {
+    code: `
+      document.body.insertAdjacentHTML(
+        "afterend",
+        '<iframe src="${url}" style="display:none" />'
+      );`
+  });
+}
+
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
   chrome.tabs.executeScript(
@@ -20,10 +30,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
           "&amp;note=" +
           encodeURIComponent(note);
 
-        document.body.insertAdjacentHTML(
-          "afterEnd",
-          '<iframe src="' + url + '" style="display:none" />'
-        );
+        openUrl(tab.tabId, url);
       });
     }
   );
